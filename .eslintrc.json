@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "no-else-return": "off",
+    "no-param-reassign": "off",
+    "react/function-component-definition": [
+      1,
+      { "namedComponents": ["arrow-function"] }
+    ],
+    "arrow-body-style": "off",
+    "no-console": "off",
+    "@next/next/no-img-element": "off",
+    "global-require": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+  }
+}

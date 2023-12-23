@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #eee;
+}
+
+main {
+  min-height: 100dvh;
+  width: 100vw;
+  max-width: 500px;
+
+  margin: auto;
+  background-color: white;
+
+  padding-bottom: 100px;
+}
+
+a {
+  display: inline-block;
+}
+
+div {
+  box-sizing: border-box;
+}

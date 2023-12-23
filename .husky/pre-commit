@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "코드 확인 중......🔧"
+
+npm run lint
+npm run format
