@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import MSWComponent from "./_component/MSWComponent";
 import BottomNav from "./_component/BottomNav";
+import MSWProvider from "./_component/MSWProvider";
 import RQProvider from "./_component/RQProvider";
 import "./globals.css";
 
@@ -13,7 +13,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ko">
       <body>
-        <MSWComponent />
+        <MSWProvider />
         <RQProvider>
           <main>
             {children}
