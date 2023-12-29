@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import getHi from "../_api/getHi";
+import getHi from "@/api/home/getHi";
 
 const SayHi = () => {
   const { data } = useQuery({

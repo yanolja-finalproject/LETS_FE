@@ -3,7 +3,7 @@ import {
   QueryClient,
   dehydrate,
 } from "@tanstack/react-query";
-import getHi from "./_api/getHi";
+import getHi from "@/api/home/getHi";
 import Count from "./_component/Count";
 import SayHi from "./_component/SayHi";
 

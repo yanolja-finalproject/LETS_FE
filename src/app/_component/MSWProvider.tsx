@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const MSWComponent = () => {
+const MSWProvider = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (process.env.NEXT_PUBLIC_MSW === "true") {
@@ -14,4 +14,4 @@ const MSWComponent = () => {
   return null;
 };
 
-export default MSWComponent;
+export default MSWProvider;
