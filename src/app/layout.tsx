@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Let's",
   icons: {
-    icon: "/logo.svg",
+    icon: "/mainLogo.svg",
   },
 };
 
