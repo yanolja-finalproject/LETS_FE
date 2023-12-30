@@ -20,9 +20,9 @@ const config: Config = {
         "grey-2": "#ddd",
         "grey-3": "#ccc",
         "grey-4": "#888",
+        blue: "#0059E3",
         "blue-transparent": "rgba(1, 82, 207, 0.50)",
         red: "#EE1439",
-        blue: "#0059E3",
         orange: "#E67100",
         white: "#fff",
         brown: "#3D1200",
@@ -32,6 +32,7 @@ const config: Config = {
       },
       borderRadius: {
         lg: "12px",
+        xl: "91px",
       },
     },
   },
