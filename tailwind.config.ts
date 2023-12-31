@@ -34,6 +34,34 @@ const config: Config = {
         lg: "12px",
         xl: "91px",
       },
+      keyframes: {
+        // 약관 동의 애니메이션
+        transparencyAnimation: {
+          "0%": { backgroundColor: "transparent" },
+          "100%": { backgroundColor: "rgba(0,0,0,0.6)" },
+        },
+        transparencyAnimationReverse: {
+          "0%": { backgroundColor: "rgba(0,0,0,0.6)" },
+          "100%": { backgroundColor: "transparent" },
+        },
+        positionTopAnimation: {
+          "0%": { bottom: "-500px" },
+          "100%": { bottom: "0" },
+        },
+        positionTopAnimationReverse: {
+          "0%": { bottom: "0" },
+          "100%": { bottom: "-500px" },
+        },
+      },
+      animation: {
+        transparencyAnimation:
+          "transparencyAnimation 0.2s ease-in-out forwards",
+        transparencyAnimationReverse:
+          "transparencyAnimationReverse 0.2s ease-in-out forwards",
+        positionTopAnimation: "positionTopAnimation 0.2s ease-in-out forwards",
+        positionTopAnimationReverse:
+          "positionTopAnimationReverse 0.2s ease-in-out forwards",
+      },
     },
   },
   plugins: [],

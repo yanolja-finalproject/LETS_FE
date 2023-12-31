@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Let's - 로그인",
 };
 
-const Signin = () => {
+const SigninPage = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col justify-center items-center mt-[180px]">
@@ -40,4 +40,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default SigninPage;

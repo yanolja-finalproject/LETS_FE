@@ -2,14 +2,22 @@
 
 import useInput from "@/hooks/useInput";
 import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
-import SigninButton from "./SigninButton";
+import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import TermsForm from "./TermsForm";
 
 const EmailSigninForm = () => {
   const router = useRouter();
 
   const [emailFocus, setEmailFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
+
+  const [termsForm, setTermsForm] = useState(false);
+  const [portalElement, setPortalElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setPortalElement(document.getElementById("portal"));
+  }, [termsForm]);
 
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const passwordInputRef = useRef<HTMLInputElement | null>(null);
@@ -28,8 +36,17 @@ const EmailSigninForm = () => {
     }
   };
 
+  const openTermsForm = () => {
+    setTermsForm(true);
+  };
+
   return (
-    <form className="flex flex-col items-center mt-11  h-[calc(100dvh-48px-44px)]">
+    <form
+      className="flex flex-col items-center mt-11  h-[calc(100dvh-48px-44px)]"
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <div className="relative flex flex-col w-[90%] mb-12">
         <div
           className={`absolute ${emailFocus ? "-top-2" : "top-1/2"} ${
@@ -86,10 +103,13 @@ const EmailSigninForm = () => {
         />
       </div>
       <div className="w-[90%] grow flex items-end">
-        <SigninButton
-          emailInput={emailInput.value}
-          passwordInput={passwordInput.value}
-        />
+        <button
+          type="button"
+          className="w-full h-[56px] disabled:bg-grey-3 hover:bg-[#bb1e4a] bg-pink disabled:text-grey-4 text-white font-bold rounded-xl"
+          disabled={emailInput.value === "" || passwordInput.value === ""}
+        >
+          로그인
+        </button>
       </div>
       <div className="flex mb-20 mt-2 items-center text-[13px] text-black-4 font-[400]">
         <button
@@ -105,13 +125,14 @@ const EmailSigninForm = () => {
         <button
           type="button"
           className="p-[8px] mr-[8px] cursor-pointer"
-          onClick={() => {
-            router.push("/signin");
-          }}
+          onClick={openTermsForm}
         >
           이메일로 회원가입
         </button>
       </div>
+      {termsForm && portalElement
+        ? createPortal(<TermsForm setTermsForm={setTermsForm} />, portalElement)
+        : null}
     </form>
   );
 };
