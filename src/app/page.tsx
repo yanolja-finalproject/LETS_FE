@@ -1,9 +1,10 @@
+import getHi from "@/api/home/getHi";
 import {
   HydrationBoundary,
   QueryClient,
   dehydrate,
 } from "@tanstack/react-query";
-import getHi from "@/api/home/getHi";
+import BottomNav from "./_component/BottomNav";
 import Count from "./_component/Count";
 import SayHi from "./_component/SayHi";
 
@@ -19,6 +20,7 @@ const Home = async () => {
         <SayHi />
       </HydrationBoundary>
       <Count />
+      <BottomNav />
     </section>
   );
 };
