@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Let's - 이메일 로그인",
 };
 
-const EmailsigninPage = () => {
+const EmailSigninPage = () => {
   return (
     <div className="w-full">
       <SigninHeader text="이메일로 로그인" redirectUrl="/signin" />
@@ -17,4 +17,4 @@ const EmailsigninPage = () => {
   );
 };
 
-export default EmailsigninPage;
+export default EmailSigninPage;

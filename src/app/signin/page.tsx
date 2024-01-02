@@ -32,7 +32,7 @@ const SigninPage = () => {
           <img src="./icons/kakaoLogo.svg" alt="카카오 로고" className="mr-4" />
           <div>카카오 로그인</div>
         </Link>
-        <Link href="/emailsignin" className="text-black-4">
+        <Link href="/email-signin" className="text-black-4">
           이메일로 시작하기 &gt;
         </Link>
       </div>
