@@ -1,6 +1,6 @@
 "use client";
 
-import useInput from "@/hooks/useInput";
+import Button from "@/app/_component/Button";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -17,8 +17,15 @@ const EmailSigninForm = () => {
     setPortalElement(document.getElementById("portal"));
   }, [termsForm]);
 
-  const emailInput = useInput("");
-  const passwordInput = useInput("");
+  const [emailValue, setEmailValue] = useState("");
+  const [passwordValue, setPasswordValue] = useState("");
+
+  const handleEmailInputChange = (inputValue: string) => {
+    setEmailValue(inputValue);
+  };
+  const handlePasswordInputChange = (inputValue: string) => {
+    setPasswordValue(inputValue);
+  };
 
   const openTermsForm = () => {
     setTermsForm(true);
@@ -36,41 +43,33 @@ const EmailSigninForm = () => {
         type="text"
         name="signin-email"
         id="signin-email"
+        onInputChange={handleEmailInputChange}
       />
       <SigninInput
         title="비밀번호"
         type="password"
         name="signin-password"
         id="signin-password"
+        onInputChange={handlePasswordInputChange}
       />
 
       <div className="w-[90%] grow flex items-end">
-        <button
-          type="button"
-          className="w-full h-[56px] disabled:bg-grey-3 hover:bg-[#bb1e4a] bg-pink disabled:text-grey-4 text-white font-bold rounded-xl"
-          disabled={emailInput.value === "" || passwordInput.value === ""}
-        >
-          로그인
-        </button>
+        <Button
+          text="로그인"
+          disabled={emailValue === "" || passwordValue === ""}
+          theme="wide"
+        />
       </div>
       <div className="flex mb-20 mt-2 items-center text-[13px] text-black-4 font-[400]">
-        <button
-          type="button"
-          className="p-[8px] ml-[8px] cursor-pointer"
-          onClick={() => {
+        <Button
+          text="비밀번호 재설정"
+          theme="md"
+          onClickFn={() => {
             router.push("/signin");
           }}
-        >
-          비밀번호 재설정
-        </button>
-        <span className="w-[1px] h-[22px] bg-grey-3 m-[8px]" />
-        <button
-          type="button"
-          className="p-[8px] mr-[8px] cursor-pointer"
-          onClick={openTermsForm}
-        >
-          이메일로 회원가입
-        </button>
+        />
+        <span className="w-[1px] h-[22px] bg-grey-3 my-[8px] mx-[16px]" />
+        <Button text="이메일로 회원가입" theme="md" onClickFn={openTermsForm} />
       </div>
       {termsForm && portalElement
         ? createPortal(<TermsForm setTermsForm={setTermsForm} />, portalElement)

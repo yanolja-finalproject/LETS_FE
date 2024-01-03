@@ -8,9 +8,10 @@ interface Props {
   type: string;
   name: string;
   id: string;
+  onInputChange?: (value: string) => void;
 }
 
-const SigninInput = ({ title, type, name, id }: Props) => {
+const SigninInput = ({ title, type, name, id, onInputChange }: Props) => {
   const [focus, setFocus] = useState(false);
   const input = useInput("");
 
@@ -40,7 +41,12 @@ const SigninInput = ({ title, type, name, id }: Props) => {
         name={name}
         id={id}
         value={input.value}
-        onChange={input.onChange}
+        onChange={(e) => {
+          input.onChange(e);
+          if (onInputChange) {
+            onInputChange(e.target.value);
+          }
+        }}
         ref={inputRef}
         onFocus={() => {
           setFocus(true);
