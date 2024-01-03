@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import SigninHeader from "../signin/_component/SigninHeader";
+import DefaultHeader from "../_component/DefaultHeader";
 
 const EmailSignupPage = () => {
   const [step] = useState(1);
 
   return (
     <section>
-      <SigninHeader
+      <DefaultHeader
         text="회원가입 "
         subText={`(${step}/2)`}
         redirectUrl="/email-signin"

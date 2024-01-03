@@ -7,7 +7,7 @@ interface Props {
   theme?: string;
 }
 
-const SigninHeader = ({
+const DefaultHeader = ({
   text,
   subText = "",
   redirectUrl,
@@ -39,4 +39,4 @@ const SigninHeader = ({
   );
 };
 
-export default SigninHeader;
+export default DefaultHeader;
