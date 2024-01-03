@@ -2,15 +2,13 @@
 
 import useInput from "@/hooks/useInput";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import SigninInput from "./SigninInput";
 import TermsForm from "./TermsForm";
 
 const EmailSigninForm = () => {
   const router = useRouter();
-
-  const [emailFocus, setEmailFocus] = useState(false);
-  const [passwordFocus, setPasswordFocus] = useState(false);
 
   const [termsForm, setTermsForm] = useState(false);
   const [portalElement, setPortalElement] = useState<HTMLElement | null>(null);
@@ -19,22 +17,8 @@ const EmailSigninForm = () => {
     setPortalElement(document.getElementById("portal"));
   }, [termsForm]);
 
-  const emailInputRef = useRef<HTMLInputElement | null>(null);
-  const passwordInputRef = useRef<HTMLInputElement | null>(null);
-
   const emailInput = useInput("");
   const passwordInput = useInput("");
-
-  const handleEmaildleFocus = () => {
-    if (emailInputRef.current) {
-      emailInputRef.current.focus();
-    }
-  };
-  const handlePasswordFocus = () => {
-    if (passwordInputRef.current) {
-      passwordInputRef.current.focus();
-    }
-  };
 
   const openTermsForm = () => {
     setTermsForm(true);
@@ -47,61 +31,19 @@ const EmailSigninForm = () => {
         e.preventDefault();
       }}
     >
-      <div className="relative flex flex-col w-[90%] mb-12">
-        <div
-          className={`absolute ${emailFocus ? "-top-2" : "top-1/2"} ${
-            emailFocus ? "left-0" : "left-[16px]"
-          } -translate-y-1/2 ${
-            emailFocus ? "text-black-2" : "text-grey-4"
-          } duration-500 ${emailFocus ? "text-[13px]" : "text-[16px]"}`}
-          onClick={handleEmaildleFocus}
-        >
-          아이디 또는 이메일
-        </div>
-        <input
-          className="h-[50px] bg-grey-1 outline-none border-none rounded-lg pl-[16px] caret-blue"
-          type="text"
-          name="signin-email"
-          id="signin-email"
-          value={emailInput.value}
-          onChange={emailInput.onChange}
-          ref={emailInputRef}
-          onFocus={() => {
-            setEmailFocus(true);
-          }}
-          onBlur={() => {
-            if (emailInput.value === "") setEmailFocus(false);
-          }}
-        />
-      </div>
-      <div className="relative flex flex-col w-[90%]">
-        <div
-          className={`absolute ${passwordFocus ? "-top-2" : "top-1/2"} ${
-            passwordFocus ? "left-0" : "left-[16px]"
-          } -translate-y-1/2 ${
-            passwordFocus ? "text-black-2" : "text-grey-4"
-          } duration-500 ${passwordFocus ? "text-[13px]" : "text-[16px]"}`}
-          onClick={handlePasswordFocus}
-        >
-          비밀번호
-        </div>
-        <input
-          className="h-[50px] bg-grey-1 outline-none border-none rounded-lg pl-[16px] caret-blue"
-          type="password"
-          name="signin-password"
-          id="signin-password"
-          value={passwordInput.value}
-          ref={passwordInputRef}
-          autoComplete="on"
-          onChange={passwordInput.onChange}
-          onFocus={() => {
-            setPasswordFocus(true);
-          }}
-          onBlur={() => {
-            if (passwordInput.value === "") setPasswordFocus(false);
-          }}
-        />
-      </div>
+      <SigninInput
+        title="아이디 또는 이메일"
+        type="text"
+        name="signin-email"
+        id="signin-email"
+      />
+      <SigninInput
+        title="비밀번호"
+        type="password"
+        name="signin-password"
+        id="signin-password"
+      />
+
       <div className="w-[90%] grow flex items-end">
         <button
           type="button"
