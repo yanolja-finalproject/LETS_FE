@@ -14,7 +14,7 @@ const DefaultHeader = ({
   theme = "default",
 }: Props) => {
   return (
-    <div className="flex relative h-[48px]">
+    <div className="flex relative w-full h-[48px]">
       {redirectUrl && (
         <Link
           href={redirectUrl}
