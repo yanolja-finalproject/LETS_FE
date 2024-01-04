@@ -10,7 +10,7 @@ const ForwardBox = () => {
         나에게 맞는 패키지상품을 빠르게 찾아보세요.
       </span>
       <Link
-        href={"/search-hashtag"}
+        href={"/search-filter"}
         className="flex justify-evenly items-center rounded-full bg-gradient-to-br from-pink-1 to-pink-2 w-[54px] h-[54px]"
       >
         <img
