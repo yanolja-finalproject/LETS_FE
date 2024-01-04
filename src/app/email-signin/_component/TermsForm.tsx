@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
 }
 
 const TermsForm = ({ setTermsForm }: Props) => {
+  const router = useRouter();
+
   const [action, setAction] = useState(true);
 
   return (
@@ -54,7 +57,7 @@ const TermsForm = ({ setTermsForm }: Props) => {
           <div className="relative flex items-center">
             <div className="flex items-center mr-2 mb-2 p-1">
               <input type="checkbox" className="hidden" />
-              <button type="button" className="">
+              <button type="button">
                 <img src="./icons/allCheckIcon.svg" alt="전체 동의" />
               </button>
             </div>
@@ -93,7 +96,7 @@ const TermsForm = ({ setTermsForm }: Props) => {
             <div className="flex items-center mr-2">
               <input type="checkbox" className="hidden" />
               <button type="button" className="w-[25px]">
-                <img src="./icons/checkIcon.svg" alt="체크" width="100%" />
+                <img src="./icons/checkIcon.svg" alt="체크" />
               </button>
             </div>
             <div>
@@ -125,7 +128,10 @@ const TermsForm = ({ setTermsForm }: Props) => {
           <button
             type="button"
             className="w-full h-[56px] disabled:bg-grey-3 hover:bg-[#bb1e4a] bg-pink disabled:text-grey-4 text-[18px] text-white font-semibold rounded-xl"
-            disabled
+            // disabled
+            onClick={() => {
+              router.push("/email-signup");
+            }}
           >
             동의하고 계속하기
           </button>
