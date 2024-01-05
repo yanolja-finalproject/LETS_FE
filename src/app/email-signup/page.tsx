@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import DefaultHeader from "../_component/DefaultHeader";
+import SignupStepOne from "./_component/SignupStepOne";
 
 const EmailSignupPage = () => {
   const [step] = useState(1);
@@ -13,6 +14,7 @@ const EmailSignupPage = () => {
         subText={`(${step}/2)`}
         redirectUrl="/email-signin"
       />
+      <SignupStepOne />
     </section>
   );
 };
