@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import DefaultHeader from "../_component/DefaultHeader";
+import DefaultHeader from "../_component/common/DefaultHeader";
 import SignupStepOne from "./_component/SignupStepOne";
 
 const EmailSignupPage = () => {

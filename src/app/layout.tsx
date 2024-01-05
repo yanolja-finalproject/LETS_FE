@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import MSWProvider from "./_component/MSWProvider";
-import RQProvider from "./_component/RQProvider";
+import MSWProvider from "./_component/common/MSWProvider";
+import RQProvider from "./_component/common/RQProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
