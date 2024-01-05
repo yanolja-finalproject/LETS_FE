@@ -27,7 +27,6 @@ const Button = ({
       disabled={disabled}
       onClick={onClickFn}
     >
-      {text}
       {icon && <img src={icon} alt={text} />}
       {text}
     </button>
