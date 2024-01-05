@@ -1,15 +1,13 @@
 import Button from "@/app/_component/Button";
 import SigninInput from "@/app/email-signin/_component/SigninInput";
-import SignupEmailInfo from "./SignupEmailInfo";
-import SignupEmailWarning from "./SignupEmailWarning";
 
 interface Props {
   setStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const SignupStepOne = ({ setStep }: Props) => {
+const SignupStepTwo = ({ setStep }: Props) => {
   const handleNextStep = () => {
-    setStep(2);
+    setStep(3);
   };
 
   return (
@@ -17,22 +15,16 @@ const SignupStepOne = ({ setStep }: Props) => {
       <SigninInput
         id="email-auth"
         name="email-auth"
-        title="이메일"
+        title="비밀번호 (영문+숫자+특수문자 8~20자리)"
         type="email"
-        theme="button"
       />
-      <SignupEmailWarning />
-      <div className="flex justify-center w-full mt-9">
-        <SigninInput
-          id="certification"
-          name="certification"
-          title="인증번호"
-          type="number"
-          theme="count"
-        />
-      </div>
+      <SigninInput
+        id="certification"
+        name="certification"
+        title="비밀번호 확인"
+        type="number"
+      />
       <div className="flex flex-col justify-end w-full grow mb-3">
-        <SignupEmailInfo />
         <div className="mt-6">
           <Button text="다음" theme="wide" onClickFn={handleNextStep} />
         </div>
@@ -41,4 +33,4 @@ const SignupStepOne = ({ setStep }: Props) => {
   );
 };
 
-export default SignupStepOne;
+export default SignupStepTwo;
