@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/app/_component/Button";
+import Button from "@/app/_component/common/Button";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";

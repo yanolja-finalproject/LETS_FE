@@ -1,4 +1,4 @@
-import Button from "@/app/_component/Button";
+import Button from "@/app/_component/common/Button";
 import SigninInput from "@/app/email-signin/_component/SigninInput";
 import SignupEmailInfo from "./SignupEmailInfo";
 import SignupEmailWarning from "./SignupEmailWarning";
