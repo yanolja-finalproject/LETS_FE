@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/app/_component/Button";
+import Button from "@/app/_component/common/Button";
 import useInput from "@/hooks/useInput";
 import { useRef, useState } from "react";
 import SignupErrorText from "./SignupErrorText";
