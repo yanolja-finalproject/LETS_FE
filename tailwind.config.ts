@@ -9,6 +9,10 @@ const config: Config = {
     },
 
     extend: {
+      screens: {
+        mb: "375px",
+        web: "500px",
+      },
       colors: {
         black: "#000",
         "black-1": "#111",

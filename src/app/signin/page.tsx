@@ -10,7 +10,7 @@ const SigninPage = () => {
     <div className="w-full">
       <div className="flex flex-col justify-center items-center mt-[180px]">
         <img
-          src="./icons/mainTitle.svg"
+          src="./assets/mainTitle.svg"
           alt="메인 타이틀"
           width="40%"
           className="mb-4"
