@@ -4,6 +4,7 @@ interface Props {
   onClickFn?: () => void;
   disabled?: boolean;
   theme?: string;
+  icon?: string;
 }
 
 const themes: { [key: string]: string } = {
@@ -17,6 +18,7 @@ const Button = ({
   onClickFn,
   disabled = false,
   theme = "",
+  icon,
 }: Props) => {
   return (
     <button
@@ -25,6 +27,8 @@ const Button = ({
       disabled={disabled}
       onClick={onClickFn}
     >
+      {text}
+      {icon && <img src={icon} alt={text} />}
       {text}
     </button>
   );
