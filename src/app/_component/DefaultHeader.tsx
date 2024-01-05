@@ -32,7 +32,7 @@ const DefaultHeader = ({
           </>
         )}
         {theme === "main" && (
-          <img src="./icons/mainTitle.svg" alt="메인 로고" width={75} />
+          <img src="./assets/mainTitle.svg" alt="메인 로고" width={75} />
         )}
       </div>
     </div>

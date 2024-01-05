@@ -33,7 +33,7 @@ const EmailSigninForm = () => {
 
   return (
     <form
-      className="flex flex-col items-center mt-11  h-[calc(100dvh-48px-44px)]"
+      className="flex flex-col items-center mt-11 h-[calc(100dvh-48px-44px)] web:px-6"
       onSubmit={(e) => {
         e.preventDefault();
       }}
@@ -53,7 +53,7 @@ const EmailSigninForm = () => {
         onInputChange={handlePasswordInputChange}
       />
 
-      <div className="w-[90%] grow flex items-end">
+      <div className="w-full grow flex items-end">
         <Button
           text="로그인"
           disabled={emailValue === "" || passwordValue === ""}
