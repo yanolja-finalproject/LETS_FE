@@ -37,6 +37,9 @@ const config: Config = {
         "pink-2": "#FF3478",
         yellow: "#FFD600",
       },
+      borderColor: {
+        transparent: "transparent",
+      },
       borderRadius: {
         lg: "12px",
         xl: "91px",
