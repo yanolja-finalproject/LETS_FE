@@ -39,7 +39,7 @@ const ReservationTabContent = () => {
       </ul>
       <Button
         text="더보기"
-        styleClass="bg-gray-100 w-full flex justify-center gap-4 z-5  text-center items-center py-2 fixed bottom-[60px]"
+        styleClass="bg-gray-100 w-full flex justify-center gap-4 z-5  text-center items-center py-2 fixed bottom-[60px] max-w-[500px] w-full"
         icon="/icons/bottomArrowIcon.svg"
       />
     </>
