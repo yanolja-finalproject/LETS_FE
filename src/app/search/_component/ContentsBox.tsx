@@ -8,8 +8,8 @@ const ContentsBox = ({
   children: React.ReactNode;
 }) => {
   return (
-    <section className="pl-6">
-      <p className="text-black-2 font-semibold text-[18px]">{title}</p>
+    <section className="px-6">
+      <p className="my-6 text-black-2 font-semibold text-[18px]">{title}</p>
       {children}
     </section>
   );
