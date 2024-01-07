@@ -4,7 +4,7 @@ import { useState } from "react";
 import Tabs from "@/app/_component/common/Tabs";
 import TabButtons from "@/app/_component/common/TabButtons";
 
-export interface Props {
+interface Props {
   tabs: {
     name: string;
     content: JSX.Element;
