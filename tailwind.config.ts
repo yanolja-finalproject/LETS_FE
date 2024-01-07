@@ -10,7 +10,7 @@ const config: Config = {
 
     extend: {
       screens: {
-        mb: "375px",
+        mo: "375px",
         web: "500px",
       },
       colors: {
@@ -20,7 +20,7 @@ const config: Config = {
         "black-3": "#333",
         "black-4": "#444",
         "black-6": "#666",
-        "grey-1": "#F4F4F6",
+        "grey-1": "#eee",
         "grey-2": "#ddd",
         "grey-3": "#ccc",
         "grey-4": "#888",
