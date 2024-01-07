@@ -1,17 +1,43 @@
-import Link from "next/link";
+import IconButton from "./IconButton";
 
 const BottomNav = () => {
   return (
-    <div className="fixed bottom-0 left-1/2 translate-x-[-50%] w-full bg-white flex justify-center">
-      <div className="border-solid border-black border-2 w-[500px]">
-        <Link href="/signin" className="m-2 p-2">
-          로그인
-        </Link>
-        <Link href="/" className="m-2">
-          홈
-        </Link>
-      </div>
-    </div>
+    <nav className="fixed bottom-0 w-full h-[56px] bg-white flex justify-center ">
+      <ul className="w-[500px] flex justify-around">
+        <li className="">
+          <IconButton
+            href="/"
+            text="홈"
+            basic="./icons/navHomeIcon.svg"
+            active="./icons/navHomeIcon.svg"
+          />
+        </li>
+        <li>
+          <IconButton
+            href="/search"
+            text="검색"
+            basic="./icons/navSearchIcon.svg"
+            active="./icons/navSearchActiveIcon.svg"
+          />
+        </li>
+        <li>
+          <IconButton
+            href="/heart"
+            text="찜"
+            basic="./icons/navHeartIcon.svg"
+            active="./icons/navHeartActiveIcon.svg"
+          />
+        </li>
+        <li>
+          <IconButton
+            href="/my"
+            text="마이"
+            basic="./icons/navMyIcon.svg"
+            active="./icons/navHomeIcon.svg"
+          />
+        </li>
+      </ul>
+    </nav>
   );
 };
 
