@@ -7,9 +7,9 @@ const HashtagsBox = async () => {
   const hashtags: FetchResponse<HashtagItem[]> = await getHashtags();
 
   return (
-    <ul className="w-full">
+    <section className="w-full flex flex-wrap gap-2 justify-between">
       {hashtags.data?.map((hashtag: HashtagItem) => <Hashtag data={hashtag} />)}
-    </ul>
+    </section>
   );
 };
 
