@@ -5,6 +5,9 @@ interface Props {
   subText?: string;
   redirectUrl?: string;
   theme?: string;
+  iconUrl?: string;
+  iconSrc?: string;
+  iconAlt?: string;
 }
 
 const DefaultHeader = ({
@@ -12,6 +15,9 @@ const DefaultHeader = ({
   subText = "",
   redirectUrl,
   theme = "default",
+  iconUrl,
+  iconSrc,
+  iconAlt,
 }: Props) => {
   return (
     <div className="flex relative w-full h-[48px]">
@@ -20,7 +26,7 @@ const DefaultHeader = ({
           href={redirectUrl}
           className="absolute left-[32px] top-1/2 -translate-y-1/2"
         >
-          <img src="./icons/leftArrowIcon.svg" alt="왼쪽 화살표" width="24px" />
+          <img src="/icons/leftArrowIcon.svg" alt="왼쪽 화살표" width="24px" />
         </Link>
       )}
 
@@ -32,9 +38,18 @@ const DefaultHeader = ({
           </>
         )}
         {theme === "main" && (
-          <img src="./assets/mainTitle.svg" alt="메인 로고" width={75} />
+          <img src="/assets/mainTitle.svg" alt="메인 로고" width={75} />
         )}
       </div>
+
+      {iconUrl && iconSrc && (
+        <Link
+          href={iconUrl}
+          className="absolute right-[32px] top-1/2 -translate-y-1/2"
+        >
+          <img src={iconSrc} alt={iconAlt} width="24" />
+        </Link>
+      )}
     </div>
   );
 };

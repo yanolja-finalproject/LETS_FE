@@ -18,7 +18,15 @@ const MyPage = async () => {
 
   return (
     <section className="w-full flex flex-col">
-      <DefaultHeader text="마이페이지" redirectUrl="/" theme="default" />
+      <DefaultHeader
+        text="마이페이지"
+        redirectUrl="/"
+        theme="default"
+        iconSrc="/icons/dotMenuIcon.svg"
+        iconUrl="/my/menu"
+        iconAlt="메뉴 아이콘"
+      />
+
       <UserInfo />
       <UpcomingPackages />
       <TabsContainer
