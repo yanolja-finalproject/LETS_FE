@@ -21,7 +21,9 @@ const SignupStepOne = ({ setStep }: Props) => {
         type="email"
         theme="button"
       />
-      <SignupEmailWarning />
+      <div className="w-full -mt-1">
+        <SignupEmailWarning />
+      </div>
       <div className="flex justify-center w-full mt-9">
         <SigninInput
           id="certification"
