@@ -46,6 +46,8 @@ const EmailSigninForm = () => {
 
       if (data.code === 200) {
         console.log("로그인 성공");
+      } else if (data.code === 409) {
+        setEmailErrorMessage("입력하신 이메일은 존재하지 않습니다.");
       }
     }
   };
