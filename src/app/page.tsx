@@ -1,10 +1,10 @@
 import BottomNav from "./_component/common/layout/BottomNav";
 import DefaultHeader from "./_component/common/layout/DefaultHeader";
-import HomeAdvertisements from "./home/_component/HomeAdvertisements";
-import HomeHashtags from "./home/_component/HomeHashtags";
-import HomePackages from "./home/_component/HomePackages";
-import HomeProsAndCons from "./home/_component/HomeProsAndCons";
-import HomeThemePackage from "./home/_component/HomeThemePackage";
+import HomeAdvertisements from "./(navbar)/home/_component/HomeAdvertisements";
+import HomeHashtags from "./(navbar)/home/_component/HomeHashtags";
+import HomePackages from "./(navbar)/home/_component/HomePackages";
+import HomeProsAndCons from "./(navbar)/home/_component/HomeProsAndCons";
+import HomeThemePackage from "./(navbar)/home/_component/HomeThemePackage";
 
 const Home = async () => {
   return (
