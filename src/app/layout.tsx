@@ -15,9 +15,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="ko">
       <body>
         <MSWProvider />
-        <RQProvider>
-          <main>{children}</main>
-        </RQProvider>
+        <RQProvider>{children}</RQProvider>
       </body>
     </html>
   );

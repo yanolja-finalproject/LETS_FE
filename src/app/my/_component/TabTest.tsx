@@ -1,7 +1,7 @@
 // TODO:::이후 제거할 예정입니당
 
 import React from "react";
-import TabsContainer from "@/app/_component/common/TabsContainer";
+import TabsContainer from "@/app/_component/common/layout/TabsContainer";
 import ReservationTabContent from "./ReservationTabContent";
 import MyReviewTabContent from "./MyReviewTabContent";
 
