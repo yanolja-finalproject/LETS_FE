@@ -1,5 +1,5 @@
+import { ListItemProps } from "@/app/types";
 import List from "./_component/List";
-import { ListItemProps } from "../../(navbar)/my/_types/my.types";
 import AuthItems from "./_component/AuthItems";
 import MenuSection from "./_component/MenuSection";
 
