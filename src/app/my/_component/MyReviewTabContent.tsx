@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/app/_component/common/Button";
+import Button from "@/app/_component/common/atom/Button";
 import renderStars from "@/utils/renderStars";
 
 const averageScore = 3.5;
