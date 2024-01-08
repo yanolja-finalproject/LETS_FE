@@ -4,6 +4,8 @@ import ContentsBox from "./_component/ContentsBox";
 import SearchHeader from "./_component/SearchHeader";
 import HashtagsBox from "../../_component/common/layout/HashtagsBox";
 
+export const dynamic = "force-dynamic";
+
 const SearchPage = () => {
   return (
     <div className="w-full flex flex-col">
