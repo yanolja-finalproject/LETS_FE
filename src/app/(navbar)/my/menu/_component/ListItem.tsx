@@ -1,5 +1,5 @@
+import { ListItemProps } from "@/app/types";
 import Link from "next/link";
-import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
 
 const ListItem = ({
   title,
