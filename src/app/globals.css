@@ -24,8 +24,13 @@ main {
   width: 100vw;
 
   margin: auto;
-  padding-bottom: 56px;
   background-color: white;
+}
+
+section {
+  width: 100%;
+
+  padding-bottom: 56px;
 }
 
 a {

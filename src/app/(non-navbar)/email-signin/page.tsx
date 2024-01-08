@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import DefaultHeader from "../_component/common/layout/DefaultHeader";
+import DefaultHeader from "../../_component/common/layout/DefaultHeader";
 import EmailSigninForm from "./_component/EmailSigninForm";
 
 export const metadata: Metadata = {

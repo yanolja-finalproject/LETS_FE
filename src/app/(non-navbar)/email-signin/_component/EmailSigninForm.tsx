@@ -60,7 +60,7 @@ const EmailSigninForm = () => {
           theme="wide"
         />
       </div>
-      <div className="flex mb-20 mt-2 items-center text-[13px] text-black-4 font-[400]">
+      <div className="flex mb-20 mt-2 items-center text-[13px] text-black-4 font-normal">
         <Button
           text="비밀번호 재설정"
           theme="md"
@@ -68,7 +68,7 @@ const EmailSigninForm = () => {
             router.push("/signin");
           }}
         />
-        <span className="w-[1px] h-[22px] bg-grey-3 my-[8px] mx-[16px]" />
+        <span className="w-[1px] h-[22px] bg-grey-3 my-2 mx-4" />
         <Button text="이메일로 회원가입" theme="md" onClickFn={openTermsForm} />
       </div>
       {termsForm && portalElement

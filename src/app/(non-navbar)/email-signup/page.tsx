@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import DefaultHeader from "../_component/common/layout/DefaultHeader";
+import DefaultHeader from "../../_component/common/layout/DefaultHeader";
 import SignupComplete from "./_component/SignupComplete";
 import SignupStepOne from "./_component/SignupStepOne";
 import SignupStepTwo from "./_component/SignupStepTwo";
