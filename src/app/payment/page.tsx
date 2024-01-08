@@ -1,15 +1,24 @@
 import React from "react";
 
-const payment = () => {
+interface PaymentProps {
+  progress: number;
+}
+
+const payment = ({ progress }: PaymentProps) => {
   return (
     <section>
-      <div className="flex w-full items-center">
-        <div className="bg-pink text-white flex-1 p-2.5 text-center text-lg">
-          1. 예약자 정보 입력
-        </div>
-        <div className="w-0 h-0 border-t-[20px] border-t-transparent border-b-[20px] border-b-transparent border-l-[20px] border-l-pink mx-auto" />
-        <div className="bg-grey-4 text-white flex-3 p-2.5 text-center flex justify-center items-center text-lg">
-          2. 예약 완료
+      <div className="flex justify-around my-2 font-bold">
+        <span>예약자 정보 입력</span>
+        <span>예약완료</span>
+      </div>
+      <div className="bg-white sticky top-0  p-2 ">
+        <div className="w-4/5 mx-auto rounded-full">
+          <div
+            className="bg-pink text-xs font-bold text-blue-100 text-center leading-none rounded-full"
+            style={{ width: `${progress}%` }}
+          >
+            {progress}%
+          </div>
         </div>
       </div>
 

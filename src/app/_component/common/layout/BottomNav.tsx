@@ -30,7 +30,7 @@ const BottomNav = () => {
         </li>
         <li>
           <IconButton
-            href="/my"
+            href="/payment"
             text="마이"
             basic="./icons/navMyIcon.svg"
             active="./icons/navHomeIcon.svg"
