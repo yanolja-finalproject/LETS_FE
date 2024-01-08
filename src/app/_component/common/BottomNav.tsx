@@ -10,6 +10,9 @@ const BottomNav = () => {
         <Link href="/" className="m-2">
           홈
         </Link>
+        <Link href="/payment" className="m-2">
+          결제완료
+        </Link>
       </div>
     </div>
   );
