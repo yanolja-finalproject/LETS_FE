@@ -1,7 +1,7 @@
 import getHashtags from "@/api/search/getHashtags";
 import { FetchResponse, HashtagItem } from "@/app/types";
 import React from "react";
-import Hashtag from "./Hashtag";
+import Hashtag from "../atom/Hashtag";
 
 const HashtagsBox = async () => {
   const hashtags: FetchResponse<HashtagItem[]> = await getHashtags();

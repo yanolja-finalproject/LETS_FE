@@ -2,7 +2,7 @@ import React from "react";
 import ForwardBox from "./_component/ForwardBox";
 import ContentsBox from "./_component/ContentsBox";
 import SearchHeader from "./_component/SearchHeader";
-import HashtagsBox from "./_component/HashtagsBox";
+import HashtagsBox from "../../_component/common/layout/HashtagsBox";
 
 const SearchPage = () => {
   return (

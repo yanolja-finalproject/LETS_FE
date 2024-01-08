@@ -9,7 +9,9 @@ const ContentsBox = ({
 }) => {
   return (
     <section className="px-6">
-      <p className="my-6 text-black-2 font-semibold text-[18px]">{title}</p>
+      <p className="my-6 text-black-2 font-semibold text-[18px] whitespace-pre-line">
+        {title}
+      </p>
       {children}
     </section>
   );
