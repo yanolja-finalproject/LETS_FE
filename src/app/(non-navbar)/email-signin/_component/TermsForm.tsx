@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/app/_component/common/Button";
+import Button from "@/app/_component/common/atom/Button";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import AllselectCheckbox from "./AllselectCheckbox";

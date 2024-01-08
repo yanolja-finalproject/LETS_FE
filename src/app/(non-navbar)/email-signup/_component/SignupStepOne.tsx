@@ -1,5 +1,5 @@
 import Button from "@/app/_component/common/atom/Button";
-import SigninInput from "@/app/email-signin/_component/SigninInput";
+import SigninInput from "@/app/(non-navbar)/email-signin/_component/SigninInput";
 import SignupEmailInfo from "./SignupEmailInfo";
 import SignupEmailWarning from "./SignupEmailWarning";
 
@@ -13,7 +13,7 @@ const SignupStepOne = ({ setStep }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-11 h-full px-6">
+    <div className="flex flex-col items-center pt-11 h-full px-6">
       <SigninInput
         id="email-auth"
         name="email-auth"
