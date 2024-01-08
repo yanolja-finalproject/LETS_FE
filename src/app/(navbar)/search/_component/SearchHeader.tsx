@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchHeader = () => {
   return (
-    <header className="w-full h-12 py-1 px-6 relative">
+    <header className="w-full h-12 py-1 px-6 mb-4 relative">
       <form className="w-full">
         <input
           type="text"
