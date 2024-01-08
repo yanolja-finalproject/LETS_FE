@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
+import { ListItemProps } from "@/app/types";
 import List from "./List";
 import ConfirmModal from "./ConfirmModal";
 import Withdraw from "./Withdraw";
