@@ -1,7 +1,7 @@
 interface Props {
   text: string;
   styleClass?: string;
-  onClickFn?: () => void;
+  onClickFn?: VoidFunction;
   disabled?: boolean;
   theme?: string;
   icon?: string;

@@ -1,43 +1,70 @@
 import { http, HttpResponse } from "msw";
 
-const User = [
-  { id: "test1", nickname: "test1" },
-  { id: "test2", nickname: "test2" },
-  { id: "test3", nickname: "test3" },
-];
-
 const handlers = [
   http.get("/api/hi", () => {
     console.log("메인");
     return HttpResponse.json("hi");
   }),
 
-  http.post("/api/login", () => {
-    console.log("로그인");
-    return HttpResponse.json(User[1], {
-      headers: {
-        "Set-Cookie": "connect.sid=msw-cookie;HttpOnly;Path=/",
-      },
+  http.post("/v1/users/email/confirm", () => {
+    console.log("인증번호 요청");
+    return HttpResponse.json({
+      code: 200,
     });
   }),
 
-  http.post("/api/logout", () => {
-    console.log("로그아웃");
-    return new HttpResponse(null, {
-      headers: {
-        "Set-Cookie": "connect.sid=;HttpOnly;Path=/;Max-Age=0",
-      },
+  http.get("/v1/users/email/verify/:code", () => {
+    console.log("이메일 인증");
+    return HttpResponse.json({
+      code: 200,
     });
   }),
 
-  http.post("/api/users", async () => {
+  http.get("/v1/users/email", () => {
     console.log("회원가입");
-    return HttpResponse.text(JSON.stringify("ok"), {
-      headers: {
-        "Set-Cookie": "connect.sid=msw-cookie;HttpOnly;Path=/;Max-Age=0",
+    return HttpResponse.json({
+      code: 200,
+      data: {
+        email: "user@example.com",
+        username: "test",
+        nickname: "dqnaQwncD",
       },
     });
   }),
+
+  http.post("/v1/users/email/login", async ({ request }) => {
+    console.log("로그인");
+    const data = (await request.json()) as {
+      id: string;
+      password: string;
+    };
+
+    if (data.id === "a") {
+      return HttpResponse.json({ code: 409 });
+    }
+
+    return HttpResponse.json(
+      { code: 200 },
+      {
+        headers: {
+          "Set-Cookie": "connect.accessToken=msw-cookie;HttpOnly;Path=/",
+        },
+      },
+    );
+  }),
+
+  http.post("/v1/users/logout", () => {
+    console.log("로그아웃");
+    return HttpResponse.json(
+      { code: 200 },
+      {
+        headers: {
+          "Set-Cookie": "connect.accessToken=;HttpOnly;Path=/;Max-Age=0",
+        },
+      },
+    );
+  }),
+
   http.get("/v1/search/hashtags", () => {
     const hashtags = [
       {
