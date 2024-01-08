@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Tabs from "@/app/_component/common/Tabs";
-import TabButtons from "@/app/_component/common/TabButtons";
+import Tabs from "@/app/_component/common/atom/Tabs";
+import TabButtons from "@/app/_component/common/atom/TabButtons";
 
 interface Props {
   tabs: {

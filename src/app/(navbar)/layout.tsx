@@ -1,4 +1,4 @@
-import BottomNav from "../_component/common/BottomNav";
+import BottomNav from "../_component/common/layout/BottomNav";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

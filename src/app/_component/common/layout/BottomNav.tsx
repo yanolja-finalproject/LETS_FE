@@ -1,4 +1,4 @@
-import IconButton from "./IconButton";
+import IconButton from "../atom/IconButton";
 
 const BottomNav = () => {
   return (
