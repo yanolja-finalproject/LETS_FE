@@ -1,4 +1,4 @@
-import Button from "@/app/_component/common/Button";
+import Button from "@/app/_component/common/atom/Button";
 import SigninInput from "@/app/email-signin/_component/SigninInput";
 
 interface Props {
