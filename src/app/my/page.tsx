@@ -1,10 +1,10 @@
-import BottomNav from "../_component/common/BottomNav";
+import BottomNav from "../_component/common/layout/BottomNav";
 import UpcomingPackages from "./_component/UpcomingPackages";
 import UserInfo from "./_component/UserInfo";
-import DefaultHeader from "../_component/common/DefaultHeader";
+import DefaultHeader from "../_component/common/layout/DefaultHeader";
 import ReservationTabContent from "./_component/ReservationTabContent";
 import MyReviewTabContent from "./_component/MyReviewTabContent";
-import TabsContainer from "../_component/common/TabsContainer";
+import TabsContainer from "../_component/common/layout/TabsContainer";
 
 export function generateMetadata() {
   return { title: "Let's - 마이페이지" };

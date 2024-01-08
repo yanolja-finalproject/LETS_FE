@@ -24,6 +24,7 @@ const config: Config = {
         "grey-2": "#ddd",
         "grey-3": "#ccc",
         "grey-4": "#888",
+        "grey-5": "#bbb",
         blue: "#0059E3",
         "blue-transparent": "rgba(1, 82, 207, 0.50)",
         "blue-1": "#F4F8FF",
@@ -36,9 +37,6 @@ const config: Config = {
         "pink-1": "#FE516F",
         "pink-2": "#FF3478",
         yellow: "#FFD600",
-      },
-      borderColor: {
-        transparent: "transparent",
       },
       borderRadius: {
         lg: "12px",
