@@ -1,5 +1,6 @@
 "use client";
 
+import postSignin from "@/api/signin/postSignin";
 import Button from "@/app/_component/common/atom/Button";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -31,6 +32,11 @@ const EmailSigninForm = () => {
     setTermsForm(true);
   };
 
+  const handleLogin = async () => {
+    const data = await postSignin({ id: emailValue, password: passwordValue });
+    console.log(data);
+  };
+
   return (
     <form
       className="flex flex-col items-center mt-11 h-[calc(100dvh-48px-44px)] web:px-6"
@@ -58,6 +64,7 @@ const EmailSigninForm = () => {
           text="로그인"
           disabled={emailValue === "" || passwordValue === ""}
           theme="wide"
+          onClickFn={handleLogin}
         />
       </div>
       <div className="flex mb-20 mt-2 items-center text-[13px] text-black-4 font-normal">
