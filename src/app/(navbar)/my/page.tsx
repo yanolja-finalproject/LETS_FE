@@ -1,10 +1,10 @@
-import BottomNav from "../_component/common/layout/BottomNav";
-import UpcomingPackages from "./_component/UpcomingPackages";
-import UserInfo from "./_component/UserInfo";
-import DefaultHeader from "../_component/common/layout/DefaultHeader";
+import DefaultHeader from "@/app/_component/common/layout/DefaultHeader";
+import TabsContainer from "@/app/_component/common/layout/TabsContainer";
+import BottomNav from "@/app/_component/common/layout/BottomNav";
 import ReservationTabContent from "./_component/ReservationTabContent";
 import MyReviewTabContent from "./_component/MyReviewTabContent";
-import TabsContainer from "../_component/common/layout/TabsContainer";
+import UserInfo from "./_component/UserInfo";
+import UpcomingPackages from "./_component/UpcomingPackages";
 
 export function generateMetadata() {
   return { title: "Let's - 마이페이지" };
@@ -26,7 +26,6 @@ const MyPage = async () => {
         iconUrl="/my/menu"
         iconAlt="메뉴 아이콘"
       />
-
       <UserInfo />
       <UpcomingPackages />
       <TabsContainer

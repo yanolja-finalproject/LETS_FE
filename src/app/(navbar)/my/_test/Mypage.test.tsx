@@ -1,5 +1,5 @@
 import { render, screen } from "@/app/test-utils";
-import Signin from "../page";
+import Signin from "../../../my/page";
 
 jest.mock("next/navigation", () => ({
   useRouter() {

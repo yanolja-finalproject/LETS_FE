@@ -1,4 +1,4 @@
-import { ListItemProps } from "../../_types/my.types";
+import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
 import ListItem from "./ListItem";
 
 interface Props {

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { ListItemProps } from "../../_types/my.types";
+import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
 import List from "./List";
 import ConfirmModal from "./ConfirmModal";
 import Withdraw from "./Withdraw";
@@ -47,7 +47,6 @@ const AuthItems = () => {
 
   return (
     <>
-      <List items={AuthMenu} />
       {!isWithdrawing && <List items={AuthMenu} />}
       <ConfirmModal
         isOpen={isModalOpen}

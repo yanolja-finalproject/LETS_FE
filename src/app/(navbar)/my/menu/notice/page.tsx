@@ -1,6 +1,6 @@
 import React from "react";
 import List from "../_component/List";
-import { ListItemProps } from "../../_types/my.types";
+import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
 import MenuSection from "../_component/MenuSection";
 
 const NoticePage = () => {

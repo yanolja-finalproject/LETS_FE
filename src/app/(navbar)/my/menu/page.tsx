@@ -1,5 +1,5 @@
 import List from "./_component/List";
-import { ListItemProps } from "../_types/my.types";
+import { ListItemProps } from "../../(navbar)/my/_types/my.types";
 import AuthItems from "./_component/AuthItems";
 import MenuSection from "./_component/MenuSection";
 
@@ -24,12 +24,12 @@ const MenuPage = () => {
   const TermsMenu: ListItemProps[] = [
     {
       title: "서비스 이용약관",
-      link: "/my/menu/terms-of-use",
+      link: "/my/menu/terms",
       theme: "menu",
     },
     {
       title: "개인정보 처리방침",
-      link: "/my/menu/privacy-policy",
+      link: "/my/menu/privacy",
       theme: "menu",
     },
   ];

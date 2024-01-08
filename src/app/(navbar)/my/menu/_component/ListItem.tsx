@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ListItemProps } from "../../_types/my.types";
+import { ListItemProps } from "../../../(navbar)/my/_types/my.types";
 
 const ListItem = ({
   title,
@@ -25,14 +25,14 @@ const ListItem = ({
             className={`${baseClass} ${menuClass}`}
           >
             {title}
-            <img className="mr-2 w-8" src={iconSrc} alt={`${title}로 이동`} />
+            <img className="mr-2 w-8" src={iconSrc} alt={`${title}으로 이동`} />
           </button>
         );
       } else if (link) {
         return (
           <Link href={link} className={`${baseClass} ${menuClass}`}>
             {title}
-            <img className="mr-2 w-8" src={iconSrc} alt={`${title}로 이동`} />
+            <img className="mr-2 w-8" src={iconSrc} alt={`${title}으로 이동`} />
           </Link>
         );
       }
