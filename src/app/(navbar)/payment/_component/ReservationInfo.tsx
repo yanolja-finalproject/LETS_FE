@@ -1,27 +1,8 @@
 import React from "react";
 
-interface PaymentProps {
-  progress: number;
-}
-
-const payment = ({ progress }: PaymentProps) => {
+const ReservationInfo = () => {
   return (
-    <section>
-      <div className="flex justify-around my-2 font-bold">
-        <span>예약자 정보 입력</span>
-        <span>예약완료</span>
-      </div>
-      <div className="bg-white sticky top-0  p-2 ">
-        <div className="w-4/5 mx-auto rounded-full">
-          <div
-            className="bg-pink text-xs font-bold text-blue-100 text-center leading-none rounded-full"
-            style={{ width: `${progress}%` }}
-          >
-            {progress}%
-          </div>
-        </div>
-      </div>
-
+    <div>
       <div className="p-4 border-b-2 font-bold">
         <div className="py-3">
           <h4 className="text-lg">예약상품정보</h4>
@@ -349,8 +330,8 @@ const payment = ({ progress }: PaymentProps) => {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default payment;
+export default ReservationInfo;
