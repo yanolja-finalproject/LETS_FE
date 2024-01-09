@@ -5,7 +5,7 @@ const postSignup = async (body: {
   isTermsAgreed: boolean;
 }) => {
   const result = await fetch(
-    `${process.env.NEXT_PUBLIC_MSW_SERVER_URL}/v1/users/email`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/v1/users/email`,
     {
       method: "POST",
       headers: {

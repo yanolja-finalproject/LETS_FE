@@ -1,6 +1,6 @@
 const postSignin = async (body: { id: string; password: string }) => {
   const result = await fetch(
-    `${process.env.NEXT_PUBLIC_MSW_SERVER_URL}/v1/users/email/login`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/v1/users/email/login`,
     {
       method: "POST",
       headers: {

@@ -1,6 +1,6 @@
 const postCertification = async (body: { email: string }) => {
   const result = await fetch(
-    `${process.env.NEXT_PUBLIC_MSW_SERVER_URL}/v1/users/email/confirm`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/v1/users/email/confirm`,
     {
       method: "POST",
       headers: {
