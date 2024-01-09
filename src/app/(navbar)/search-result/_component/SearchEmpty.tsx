@@ -1,7 +1,7 @@
 import React from "react";
 import EmptyBox from "@/app/_component/common/layout/EmptyBox";
 import HashtagsBox from "@/app/_component/common/layout/HashtagsBox";
-import ContentsBox from "../../search/_component/ContentsBox";
+import ContentsBox from "../../../_component/common/layout/ContentsBox";
 
 const SearchEmpty = () => {
   return (
