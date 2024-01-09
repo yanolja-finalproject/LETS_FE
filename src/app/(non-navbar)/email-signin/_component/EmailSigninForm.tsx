@@ -39,6 +39,7 @@ const EmailSigninForm = () => {
     if (!validateEmail(emailValue)) {
       setEmailErrorMessage("잘못된 유형의 이메일 입니다. 수정해주세요.");
     } else {
+      setEmailErrorMessage("");
       const data = await postSignin({
         id: emailValue,
         password: passwordValue,
