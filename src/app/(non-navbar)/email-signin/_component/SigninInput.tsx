@@ -12,6 +12,7 @@ interface Props {
   id: string;
   theme?: string;
   errorMessage?: string;
+  onClickFn?: VoidFunction;
   onInputChange?: (value: string) => void;
 }
 
@@ -22,6 +23,7 @@ const SigninInput = ({
   id,
   theme,
   errorMessage,
+  onClickFn,
   onInputChange,
 }: Props) => {
   const [focus, setFocus] = useState(false);
@@ -76,6 +78,7 @@ const SigninInput = ({
           theme="md"
           styleClass="text-blue rounded-lg bg-white absolute top-1/2 right-[6px] -translate-y-1/2  disabled:text-blue-transparent  disabled:bg-[rgba(255,255,255,0.7)]"
           disabled={input.value === ""}
+          onClickFn={onClickFn}
         />
       )}
 
