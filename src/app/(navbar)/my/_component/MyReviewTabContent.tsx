@@ -44,7 +44,7 @@ const MyReviewTabContent = () => {
       {/* //TODO: bottomNav 높이만큼 bottom 값 수정하기 */}
       <Button
         text="더보기"
-        styleClass="bg-gray-100 w-full flex justify-center gap-4 z-5  text-center items-center py-2 fixed bottom-[60px]"
+        styleClass="bg-gray-100 flex justify-center gap-4 z-5  text-center items-center py-2 fixed bottom-[60px] max-w-[500px] w-full"
         icon="/icons/bottomArrowIcon.svg"
       />
     </>
